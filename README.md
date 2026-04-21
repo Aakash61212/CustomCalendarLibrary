@@ -29,14 +29,24 @@ CustomCalendarLibrary/
 ## 1. Add to your project
 
 Copy the `library/` folder into your project root, then in `settings.gradle`:
+in project's gradle `build.gradle`:
 ```groovy
-include ':library'
 ```
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
 In your app's `build.gradle`:
 ```groovy
 dependencies {
     implementation project(':library')
     implementation 'androidx.cardview:cardview:1.0.0'
+implementation 'com.github.Aakash61212:CustomCalendarLibrary:Tag' // 1.0.0
+
 }
 ```
 
