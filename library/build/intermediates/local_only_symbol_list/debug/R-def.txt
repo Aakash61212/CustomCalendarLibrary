@@ -1,0 +1,14 @@
+R_DEF: Internal format may change without notice
+local
+attr? ccv_arrowColor
+attr? ccv_cardBgColor
+attr? ccv_cardCornerRadius
+attr? ccv_cardElevation
+attr? ccv_dayTextColor
+attr? ccv_headerTextColor
+attr? ccv_selectedDayBgColor
+attr? ccv_selectedDayTextColor
+attr? ccv_todayBgColor
+attr? ccv_todayTextColor
+attr? ccv_weekdayTextColor
+styleable CustomCalendarView ccv_cardBgColor ccv_cardCornerRadius ccv_cardElevation ccv_headerTextColor ccv_arrowColor ccv_weekdayTextColor ccv_dayTextColor ccv_todayBgColor ccv_todayTextColor ccv_selectedDayBgColor ccv_selectedDayTextColor

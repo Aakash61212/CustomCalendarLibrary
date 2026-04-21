@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'          // required for JitPack
+}
+
+android {
+    namespace 'com.customcalendar.lib'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Expose the release component so maven-publish can find it
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+}
+
+// Maven-publish configuration (JitPack reads this)
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.Aakash61212'   // REPLACE with your GitHub username
+                artifactId = 'CustomCalendarView'
+                version = '1.0.0'
+
+                pom {
+                    name = 'CustomCalendarView'
+                    description = 'Modern customisable monthly calendar widget for Android (Java).'
+                    url = 'https://github.com/Aakash61212/CustomCalendarLibrary'
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'Aakash61212'
+                            name = 'Akash Namdev'
+                            email = 'akashnamdev6@gmail.com'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:github.com/Aakash61212/CustomCalendarLibrary.git'
+                        developerConnection = 'scm:git:ssh://github.com/Aakash61212/CustomCalendarLibrary.git'
+                        url = 'https://github.com/Aakash61212/CustomCalendarLibrary/tree/main'
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.22')
+}

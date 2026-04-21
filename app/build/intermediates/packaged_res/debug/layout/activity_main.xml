@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F3FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Page title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="My Calendar"
+            android:textColor="#1A1A2E"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- The custom calendar view -->
+        <com.customcalendar.lib.CustomCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:ccv_cardBgColor="#FFFFFF"
+            app:ccv_cardCornerRadius="20dp"
+            app:ccv_cardElevation="6dp"
+            app:ccv_headerTextColor="#1A1A2E"
+            app:ccv_arrowColor="#7C4DFF"
+            app:ccv_weekdayTextColor="#9E9E9E"
+            app:ccv_dayTextColor="#212121"
+            app:ccv_todayBgColor="#EDE7F6"
+            app:ccv_todayTextColor="#7C4DFF"
+            app:ccv_selectedDayBgColor="#7C4DFF"
+            app:ccv_selectedDayTextColor="#FFFFFF" />
+
+        <!-- Instruction text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Tap any date to see its details"
+            android:textColor="#9E9E9E"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>

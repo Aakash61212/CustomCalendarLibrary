@@ -1,0 +1,13 @@
+com.customcalendar.lib
+attr ccv_arrowColor
+attr ccv_cardBgColor
+attr ccv_cardCornerRadius
+attr ccv_cardElevation
+attr ccv_dayTextColor
+attr ccv_headerTextColor
+attr ccv_selectedDayBgColor
+attr ccv_selectedDayTextColor
+attr ccv_todayBgColor
+attr ccv_todayTextColor
+attr ccv_weekdayTextColor
+styleable CustomCalendarView ccv_arrowColor ccv_cardBgColor ccv_cardCornerRadius ccv_cardElevation ccv_dayTextColor ccv_headerTextColor ccv_selectedDayBgColor ccv_selectedDayTextColor ccv_todayBgColor ccv_todayTextColor ccv_weekdayTextColor

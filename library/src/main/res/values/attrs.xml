@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomCalendarView">
+        <!-- Card background colour -->
+        <attr name="ccv_cardBgColor"           format="color" />
+        <!-- Card corner radius (dimension) -->
+        <attr name="ccv_cardCornerRadius"       format="dimension" />
+        <!-- Card shadow elevation (dimension) -->
+        <attr name="ccv_cardElevation"          format="dimension" />
+        <!-- Month title text colour -->
+        <attr name="ccv_headerTextColor"        format="color" />
+        <!-- Navigation arrow colour -->
+        <attr name="ccv_arrowColor"             format="color" />
+        <!-- Weekday header text colour (Mon-Sat) -->
+        <attr name="ccv_weekdayTextColor"       format="color" />
+        <!-- Normal day number colour -->
+        <attr name="ccv_dayTextColor"           format="color" />
+        <!-- Today highlight circle background -->
+        <attr name="ccv_todayBgColor"           format="color" />
+        <!-- Today date number colour -->
+        <attr name="ccv_todayTextColor"         format="color" />
+        <!-- Selected day circle background -->
+        <attr name="ccv_selectedDayBgColor"     format="color" />
+        <!-- Selected day number colour -->
+        <attr name="ccv_selectedDayTextColor"   format="color" />
+    </declare-styleable>
+</resources>
